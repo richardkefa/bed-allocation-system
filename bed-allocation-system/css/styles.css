@@ -1,5 +1,49 @@
-.jumbotron {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
+#img-goodhope {
+    width: 90%;
+    height: auto;
+}
+
+#img-halo {
+    width: 90%;
+    height: auto;
+}
+
+#H-names {
+    text-align: center;
+    line-height: 1.5;
+}
+
+h3 {
+    text-align: center;
+    font-weight: bold;
+}
+.container{
+  background-color: rgb(116, 195, 251, 0.1);
+}
+.header {
+  background-color: #73C2FB;
+}
+
+footer {
+  background-color: #73C2FB;
+
+}
+footer>span {
+  margin-left: 20px;
+}
+#contactlink{
+  margin: 20px;
+  font-weight: bold;
+  font-size: large;
+}
+.navbar-light{
+  background-color: #73C2FB;
+}
+.navbar-nav{
+  float: right;
+  margin-left: 45vw;
+}
+
+.checkout{
+  background-color: #73c2fb ;
 }
