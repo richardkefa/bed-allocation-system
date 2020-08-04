@@ -1,5 +1,19 @@
 .jumbotron {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#img-goodhope {
+    width: 90%;
+    height: auto;
+}
+
+#img-halo {
+    width: 90%;
+    height: auto;
+}
+
+#H-names {
+    text-align: center;
 }
