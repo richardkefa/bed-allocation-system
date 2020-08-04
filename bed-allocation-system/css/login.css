@@ -10,3 +10,11 @@
   background-size: cover;
   position: absolute;
 }
+.form-box {
+  width: 380px;
+  height: 480px;
+  position: relative;
+  margin: 6% auto;
+  background: #fff;
+  padding: 5;
+}
