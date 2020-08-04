@@ -16,9 +16,14 @@
 
 #H-names {
     text-align: center;
+    line-height: 1.5;
 }
 
 h3 {
     text-align: center;
     font-weight: bold;
+}
+
+col-sm-3 {
+    text-align: center;
 }
