@@ -2,23 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap-4.5.0-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/jquery-3.5.1.js"></script>
-    <script src="./js/script.js"></script>
-    <title>Bed allocation system</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-4.5.0-dist/js/bootstrap.min.js">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/jquery-3.5.1.js"></script>
+  <script src="./js/script.js"></script>
+  <title>Bed allocation system</title>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="jumbotron">
-            <h1>Bed Allocation System</h1>
-            <a href="#contacts" style="color: black;">Contact</a>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#!">Bed Allocation System</a>
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#contact">Contact <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h3>Patient details</h3>
+      <form>
+        <div class="form-group row">
+          <label for="patientname" class="col-sm-2 col-form-label">Patient Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="patientname" placeholder="Enter full name...">
+          </div>
         </div>
-        <div class="container">
-            <h3><u>HOSPITALS:</h3></u>
+        <div class="form-group row">
+          <label for="medicalno" class="col-sm-2 col-form-label">Medical No</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="medicalno" placeholder="Enter Medical Number...">
+          </div>
+        </div>
+        <h3>Next of Kin Details</h3>
+        <div class="form-group row">
+          <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="fullname" placeholder="Full Name...">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="telno" class="col-sm-2 col-form-label">Tel No.</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="telno" placeholder="Enter phone Number...">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="relationship" class="col-sm-2 col-form-label">Relationship</label>
+          <div class="col-sm-10">
+            <select class="form-control" name="relationship" id="relationship">
+              <option value="gurdian">Parent/Gurdian</option>
+              <option value="relative">Relative</option>
+              <option value="friend">Friend</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="idnumber" class="col-sm-2 col-form-label">Id Number</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="idnumber" placeholder="Enter ID No...">
+          </div>
+        </div>
+      </form>
+                  <h3><u>HOSPITALS:</h3></u>
                 <br>
                 <div class="row">
                     <div class="col-md-4" id="H-names">
@@ -90,7 +147,26 @@
             <span>Email: bedallocation@info.com</span><br>
             <span>Tel Numbeer: +2541248543489</span>
         </footer>
+    <div class="border-dark">
+    <div class="text-center">
+      <h1 class="checkout">CHECKOUT</h1>
+      <div class="col-sm-8">
+        <p>Patient Name:<span class="patient-name"></span></p>
+        <p>Hospital Name:<span class="hospital-name"></span></p>
+        <p>Bed Type:<span class="bed-type"></span></p>
+        <p>Price:<span class="price"></span></p>
+        <p>Number of beds:<span class="bed-number"></span></p>
+      </div>
+      
+      <button class="btn-primary">Confirm booking</button>
     </div>
+    </div>
+  
+    <footer>
+      <span>Email: bedallocation@info.com</span><br>
+      <span>Tel Numbeer: +2541248543489</span>
+    </footer>
+  </div>
 </body>
 
 </html>
