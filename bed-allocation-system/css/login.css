@@ -4,7 +4,7 @@
   font-family: sans-serif;
 }
 html {
-   min-height: 100%;
+  min-height: 100%;
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../login-images/background2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
