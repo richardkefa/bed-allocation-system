@@ -99,10 +99,11 @@
           <label for="inputHospital" class="col-sm-2 col-form-label">HOSPITAL</label>
           <div class="col-sm-10">
             <select class="form-control" name="relationship" id="hospital">
-              <option >GREEN VIEW HOSPITAL</option>
-              <option >GOOD HOPE HOSPITAL</option>
-              <option >HALO HEAL HOSPITAL</option>
+              <option id="greenview">GREEN VIEW HOSPITAL</option>
+              <option  id="goodhope">GOOD HOPE HOSPITAL</option>
+              <option id="haloheal" >HALO HEAL HOSPITAL</option>
             </select>
+            <span id="availableBeds"></span>
           </div>
         </div>
         <div class="form-group row">
@@ -135,12 +136,13 @@
       </form>
       <h1 class="checkout" style="text-align: center;">CHECKOUT</h1>
   <div class="row border-dark">
-      <div class="col-md-12 text-center">
+      <div id="finalDetails" class="col-md-12 text-center">
         <p>Patient Name:<span class="patient-name"></span></p>
         <p>Hospital Name:<span class="hospital-name"></span></p>
         <p>Bed Type:<span class="bed-type"></span></p>
         <p>Total price:<span class="total-price"></span></p>
-        <button class="btn">Confirm booking</button>
+        <button  class="btn">Confirm booking</button>
+        <p id="confirmation-message"></p>
       </div>
       <footer>
         <span>Email: bedallocation@info.com</span><br>

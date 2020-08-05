@@ -1,3 +1,6 @@
+var totalNumberOfBedsGreenView = 20;
+var totalNumberOfBedsGoodHope = 20;
+var totalNumberOfBedsHaloHeal = 20;
 function getValue() {
 var getBedPrice=document.getElementById("bed");
 var bedPrice=parseInt(getBedPrice.options[getBedPrice.selectedIndex].value);
@@ -20,7 +23,23 @@ function Hospital (name,bed,ward,) {
 
 }
 
+
+
 $(document).ready(function() {
+  if (document.getElementById("greenview").selected==true) {
+    var availableBeds = totalNumberOfBedsGreenView -1 ;
+    totalNumberOfBedsGreenView = availableBeds  ;
+    document.getElementById("availableBeds").innerHTML="Available number of beds are "+ (totalNumberOfBedsGreenView);
+  } else if (document.getElementById("goodhope").selected==true) {
+    var availableBeds = totalNumberOfBedsGoodHope- 1;
+    totalNumberOfBedsGoodHope = availableBeds  ;
+    document.getElementById("availableBeds").innerHTML="Available number of beds are "+ (availableBeds);
+  } else if (document.getElementById("haloheal").selected==true) {
+    var availableBeds = totalNumberOfBedsHaloHeal- 1;
+    totalNumberOfBedsHaloHeal = availableBeds  ;
+    document.getElementById("availableBeds").innerHTML="Available number of beds are "+ (availableBeds);
+
+  }
   $("form.inputtedDetails").submit(function(event) {
     event.preventDefault();
     var inputtedPatientName = $("input#patientname").val();
@@ -36,11 +55,35 @@ $(document).ready(function() {
     newPatient.bookingDetails.push(newBooking)
     alert(newPatient.patientName);
 
+  /*  if(inputtedHospital == "GREEN VIEW HOSPITAL") {
+      var availableBeds = totalNumberOfBedsGreenView - 1;
+      totalNumberofBeds = availableBeds  ;
+      document.getElementById("availableBeds").innerHTML="Available number of beds are "+ (availableBeds);
+  } else if (inputtedHospital == "GOOD HOPE HOSPITAL") {
+      var availableBeds = totalNumberOfBedsGoodHope - 1;
+      document.getElementById("availableBeds").innerHTML="Available number of beds are "+ (availableBeds);
+  } else if (inputtedHospital == "HALO HEAL HOSPITAL") {
+    var availableBeds = totalNumberOfBedsHaloHeal - 1;
+    document.getElementById("availableBeds").innerHTML="Available number of beds are "+ (availableBeds);
+  } else {
+    document.getElementById("availableBeds").innerHTML="Available number of beds are 0"+ ;
 
-    $(".patient-name").append(newPatient.patientName);
-    $(".hospital-name").append(newBooking.hospitalName);
-    $(".bed-type").append(newBooking.bedType);
-    $(".total-price").append(getValue());
+  }
+*/
+    $(".patient-name").last().append(newPatient.patientName);
+    $(".hospital-name").last().append(newBooking.hospitalName);
+    $(".bed-type").last().append(newBooking.bedType);
+    $(".total-price").last().append(getValue());
+
+
+
+    /*$("input#patientname").val("");
+    $("input#medicalno").val("");
+    $("select#hospital").val("");
+    $("select#bed ").val("");
+    $("select#ward").val("");
+*/
+
 
 
 });
