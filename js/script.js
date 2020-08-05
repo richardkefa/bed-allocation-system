@@ -30,11 +30,11 @@ $(document).ready(function() {
 
     $(".new-booking").each(function() {
     var inputtedHospital = $(this).find("select#hospital").val();
-    var inputtedBedType = $(this).find("select#bed").val();
+    var inputtedBedType = $(this).find("select#bed option:selected").text();
     var inputtedWard = $(this).find("select#ward").val();
     var newBooking = new Hospital  (inputtedHospital,inputtedBedType,inputtedWard);
     newPatient.bookingDetails.push(newBooking)
-    console.log(newPatient.patientName);
+    alert(newPatient.patientName);
 
 
     $(".patient-name").append(newPatient.patientName);
