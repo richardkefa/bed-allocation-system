@@ -1,4 +1,22 @@
-<<<<<<< HEAD
+#img-goodhope {
+    width: 90%;
+    height: auto;
+}
+
+#img-halo {
+    width: 90%;
+    height: auto;
+}
+
+#H-names {
+    text-align: center;
+    line-height: 1.5;
+}
+
+h3 {
+    text-align: center;
+    font-weight: bold;
+}
 .container{
   background-color: rgb(116, 195, 251, 0.1);
 }
