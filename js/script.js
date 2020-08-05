@@ -1,6 +1,7 @@
 var totalNumberOfBedsGreenView = 20;
 var totalNumberOfBedsGoodHope = 20;
 var totalNumberOfBedsHaloHeal = 20;
+localStorage.setItem("currentTotal", totalNumberOfBedsGreenView);
 function getValue() {
 var getBedPrice=document.getElementById("bed");
 var bedPrice=parseInt(getBedPrice.options[getBedPrice.selectedIndex].value);
@@ -27,6 +28,7 @@ function Hospital (name,bed,ward,) {
 
 $(document).ready(function() {
   if (document.getElementById("greenview").selected==true) {
+    var totalNumberOfBedsGreenView = localStorage.getItem("currentTotal");
     var availableBeds = totalNumberOfBedsGreenView -1 ;
     totalNumberOfBedsGreenView = availableBeds  ;
     document.getElementById("availableBeds").innerHTML="Available number of beds are "+ (totalNumberOfBedsGreenView);
