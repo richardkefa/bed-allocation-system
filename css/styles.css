@@ -10,23 +10,25 @@
 
 #H-names {
     text-align: center;
-    line-height: 1.5;
+}
+#H-names>p{
+  margin-top: 30px;
 }
 
 h3 {
     text-align: center;
     font-weight: bold;
+    margin-bottom: 40px;
 }
 .container{
   background-color: rgb(116, 195, 251, 0.1);
 }
-.header {
-  background-color: #73C2FB;
-}
 
 footer {
   background-color: #73C2FB;
-
+  width: 100vw;
+  margin: 10px;
+  text-align: center;
 }
 footer>span {
   margin-left: 20px;
@@ -46,4 +48,25 @@ footer>span {
 
 .checkout{
   background-color: #73c2fb ;
+}
+.btn{
+  text-align: center;
+  background-color: #73c2fb;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  font-size: large;
+}
+
+#book{
+  margin-left: 30%;
+  width: 100px;
+}
+#patientdetails {
+margin-bottom: 10vh;
+margin-top: 5vh;
+}
+.text-center>p{
+  margin-right: 20vw;
 }
