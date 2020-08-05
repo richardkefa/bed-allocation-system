@@ -30,7 +30,7 @@
         </ul>
       </div>
     </nav>
-      <form id="patientdetails">
+      <form class="inputtedDetails" id="patientdetails">
         <h3>Patient details</h3>
         <div class="form-group row">
           <label for="patientname" class="col-sm-2 col-form-label">Patient Name</label>
@@ -93,11 +93,12 @@
           <p>HALO HEAL HOSPITAL<br>TEL: +254755882329</p>
         </div>
       </div>
-      <form>
+      <form class="inputtedDetails" id="booking-form">
+        <div class="new-booking">
         <div class="form-group row">
           <label for="inputHospital" class="col-sm-2 col-form-label">HOSPITAL</label>
           <div class="col-sm-10">
-            <select class="form-control" name="relationship" id="relationship">
+            <select class="form-control" name="relationship" id="hospital">
               <option value="hospital">GREEN VIEW HOSPITAL</option>
               <option value="hospital">GOOD HOPE HOSPITAL</option>
               <option value="hospital">HALO HEAL HOSPITAL</option>
@@ -107,35 +108,30 @@
         <div class="form-group row">
           <label for="inputBedType" class="col-sm-2 col-form-label">BEDTYPE</label>
           <div class="col-sm-10">
-            <select class="form-control" name="relationship" id="relationship">
-              <option value="bedtype">LOW-BED</option>
-              <option value="bedtype">FULL-ElECTRIC-BED</option>
-              <option value="bedtype">TRENDELENBURG BED</option>
+            <select class="form-control" name="relationship" id="bed">
+              <option value="1500">LOW-BED</option>
+              <option value="2000">FULL-ElECTRIC-BED</option>
+              <option value="3000">TRENDELENBURG BED</option>
             </select>
           </div>
         </div>
         <div class="form-group row">
           <label for="inputward" class="col-sm-2 col-form-label">WARD</label>
           <div class="col-sm-10">
-            <select class="form-control" name="relationship" id="relationship">
-              <option value="ward">SHARING WARD</option>
-              <option value="ward">SPECIAL WARD</option>
-              <option value="ward">PRIVATE WARD</option>
+            <select class="form-control" name="relationship" id="ward">
+              <option value="5000">SHARING WARD</option>
+              <option value="7000">SPECIAL WARD</option>
+              <option value="10000">PRIVATE WARD</option>
             </select>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="bedQuantity" class="col-sm-2 col-form-label">BED QUANTITY</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" id="bedQuantity" placeholder="Bed Quantity">
           </div>
         </div>
         <br>
         <div class="form-group row">
           <div class="col-sm-10 offset-sm-2">
-            <button type="submit" class="btn" id="book">Book</button>
+            <button onclick="getValue()" type="submit" class="btn" id="book">Book</button>
           </div>
         </div>
+      </div>
       </form>
       <h1 class="checkout" style="text-align: center;">CHECKOUT</h1>
   <div class="row border-dark">
