@@ -8,7 +8,6 @@ var totalNumberOfBedsGoodHope = 20;
 var totalNumberOfBedsHaloHeal = 20;
 localStorage.setItem("currentTotal", totalNumberOfBedsGreenView);
 
-
 function getValue() {
 var getBedPrice=document.getElementById("bed");
 var bedPrice=parseInt(getBedPrice.options[getBedPrice.selectedIndex].value);
@@ -35,6 +34,8 @@ $(document).ready(function() {
     var totalNumberOfBedsGreenView = localStorage.getItem("currentTotal");
     var availableBeds = totalNumberOfBedsGreenView -1 ;
     totalNumberOfBedsGreenView = availableBeds  ;
+        localStorage.setItem("currentTotal", totalNumberOfBedsGreenView);
+
     document.getElementById("availableBeds").innerHTML="Available number of beds are "+ (totalNumberOfBedsGreenView);
   } else if (document.getElementById("goodhope").selected==true) {
     var availableBeds = totalNumberOfBedsGoodHope- 1;
@@ -51,16 +52,13 @@ $(document).ready(function() {
     var inputtedPatientName = $("input#patientname").val();
     var inputtedMedicalNumber = parseInt($("input#medicalno").val());
     var newPatient = new Patient(inputtedPatientName,inputtedMedicalNumber);
-
     $(".new-booking").each(function() {
     var inputtedHospital = $(this).find("select#hospital").val();
     var inputtedBedType = $(this).find("select#bed option:selected").text();
     var inputtedWard = $(this).find("select#ward").val();
     var newBooking = new Hospital  (inputtedHospital,inputtedBedType,inputtedWard);
     newPatient.bookingDetails.push(newBooking)
-
-
-
+      
   /*  if(inputtedHospital == "GREEN VIEW HOSPITAL") {
       var availableBeds = totalNumberOfBedsGreenView - 1;
       totalNumberofBeds = availableBeds  ;
@@ -92,4 +90,14 @@ $(document).ready(function() {
     $("select#ward").val("");
 });
 });
+$("#confirmbooking").click(function(){
+  $("#checkout").slideUp("slow");
+  alert("reservation made succeffuly")
+})
+$("#book").click(function(){
+  $("#checkout").slideDown("slow");
+});
+$("#cancel").click(function(){
+  location.reload();
+})
 })
