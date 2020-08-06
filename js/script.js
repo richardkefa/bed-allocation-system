@@ -1,3 +1,8 @@
+
+function logOut() {
+  window.location.replace("index.html");
+}
+
 var totalNumberOfBedsGreenView = 20;
 var totalNumberOfBedsGoodHope = 20;
 var totalNumberOfBedsHaloHeal = 20;
@@ -9,20 +14,17 @@ var bedPrice=parseInt(getBedPrice.options[getBedPrice.selectedIndex].value);
 var getWardPrice=document.getElementById("ward");
 var wardPrice=parseInt(getWardPrice.options[getWardPrice.selectedIndex].value);
 var totalPrice= bedPrice + wardPrice;
-// alert(totalPrice);
 return totalPrice=bedPrice + wardPrice;
 }
 function Patient (name,number,details) {
   this.patientName=name;
   this.medicalNumber=number;
   this.bookingDetails=[];
-
 }
 function Hospital (name,bed,ward,) {
   this.hospitalName = name;
   this.bedType=bed;
   this.wardType=ward;
-
 }
 
 
@@ -50,16 +52,13 @@ $(document).ready(function() {
     var inputtedPatientName = $("input#patientname").val();
     var inputtedMedicalNumber = parseInt($("input#medicalno").val());
     var newPatient = new Patient(inputtedPatientName,inputtedMedicalNumber);
-    // alert(inputtedPatientName);
-
     $(".new-booking").each(function() {
     var inputtedHospital = $(this).find("select#hospital").val();
     var inputtedBedType = $(this).find("select#bed option:selected").text();
     var inputtedWard = $(this).find("select#ward").val();
     var newBooking = new Hospital  (inputtedHospital,inputtedBedType,inputtedWard);
     newPatient.bookingDetails.push(newBooking)
-    // alert(newPatient.patientName);
-
+      
   /*  if(inputtedHospital == "GREEN VIEW HOSPITAL") {
       var availableBeds = totalNumberOfBedsGreenView - 1;
       totalNumberofBeds = availableBeds  ;
@@ -78,19 +77,17 @@ $(document).ready(function() {
     $(".patient-name").last().text(newPatient.patientName);
     $(".hospital-name").last().text(newBooking.hospitalName);
     $(".bed-type").last().text(newBooking.bedType);
-    $(".total-price").last().text(getValue());
+    $(".total-price").last().text("Kshs " +getValue());
 
+    $("#confirm-message").on("click",function() {
+      $("#confirmation-message").last().text(("Dear " + inputtedPatientName +";" + " Medical Number: " + inputtedMedicalNumber + " , your booking details have been received at " + inputtedHospital + "." )).show();
+    });
 
-
-    /*$("input#patientname").val("");
+    $("input#patientname").val("");
     $("input#medicalno").val("");
     $("select#hospital").val("");
     $("select#bed ").val("");
     $("select#ward").val("");
-*/
-
-
-
 });
 });
 $("#confirmbooking").click(function(){

@@ -41,6 +41,9 @@ footer>span {
 .navbar-light{
   background-color: #73C2FB;
 }
+.nav-link {
+  cursor: pointer;
+}
 .navbar-nav{
   float: right;
   margin-left: 45vw;

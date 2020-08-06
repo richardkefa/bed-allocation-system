@@ -33,7 +33,28 @@
           <button type="submit" class="submit-btn" onclick="window.location.href='details.html';">Register</button>
         </form>
       </div>
-  
+      <h2>Bed Allocation System</h2>
+      <form name="form1"  id="login" class="input-group">
+        <input name="user-id" type="text" class="input-field" placeholder="User ID" required>
+        <input name="password" type="password" class="input-field" placeholder="Enter Password" required>
+        <input name"remember" type="checkbox" class="check-box"><span>Remember Password</span>
+        <button onclick="loginToPage()"type="button" class="submit-btn">Login</button>
+        <div id="output">
+
+        </div>
+      </form>
+      <form name="form2" id="register" class="input-group">
+        <input name="fullname" type="text" class="input-field" placeholder="Full Name" required>
+        <input name="email" type="email" class="input-field" placeholder="Email" required>
+        <input name="user-id" type="number" class="input-field" placeholder="ID number" required>
+        <input name="Password1" type="password" class="input-field" placeholder="Enter Password" required>
+        <input name="password2" type="password" class="input-field" placeholder="Confirm Password" required>
+        <input name="remember" type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+        <button onclick="RegisterPage()" type="button" class="submit-btn">Register</button>
+        <div id="output2">
+
+        </div>
+      </form>
     </div>
   <script src=js/login.js></script>
 </div>
