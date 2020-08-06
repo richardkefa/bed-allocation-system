@@ -73,3 +73,8 @@ margin-top: 5vh;
 .text-center>p{
   margin-right: 20vw;
 }
+#confirmation-message {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 20px;
+}
