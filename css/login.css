@@ -10,13 +10,14 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  
 
 }
 
 
 .form-box {
   width: 380px;
-  height: 480px;
+  height: 520px;
   position: relative;
   margin: 6% auto;
   background: #fff;
@@ -53,6 +54,7 @@ html {
   position: absolute;
   width: 280px;
   transition: .5s;
+  margin: 50px auto;
 }
 .input-field {
   width: 100%;
@@ -82,7 +84,7 @@ html {
 span {
   color: #777;
   font-size: 12px;
-  bottom: 68px;
+  bottom: 84px;
   position: absolute;
 }
 #login {
@@ -90,4 +92,18 @@ span {
 }
 #register {
   left: 450px;
+}
+#output,#output2 {
+  text-align: center;
+  margin-top: 20px;
+  color: red;
+  font-size: 15px;
+  padding: auto;
+}
+
+
+h2 {
+  font-size: auto;
+  text-align: center;
+  position: relative;
 }

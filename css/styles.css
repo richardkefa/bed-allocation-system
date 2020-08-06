@@ -41,6 +41,9 @@ footer>span {
 .navbar-light{
   background-color: #73C2FB;
 }
+.nav-link {
+  cursor: pointer;
+}
 .navbar-nav{
   float: right;
   margin-left: 45vw;
@@ -48,6 +51,9 @@ footer>span {
 
 .checkout{
   background-color: #73c2fb ;
+}
+#checkout{
+  display: none;
 }
 .btn{
   text-align: center;
@@ -57,6 +63,7 @@ footer>span {
   margin-bottom: 25px;
   font-weight: bold;
   font-size: large;
+  margin-right: 7vw;
 }
 
 #book{
@@ -66,7 +73,4 @@ footer>span {
 #patientdetails {
 margin-bottom: 10vh;
 margin-top: 5vh;
-}
-.text-center>p{
-  margin-right: 20vw;
 }
