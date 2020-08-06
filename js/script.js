@@ -58,7 +58,7 @@ $(document).ready(function() {
     var inputtedWard = $(this).find("select#ward").val();
     var newBooking = new Hospital  (inputtedHospital,inputtedBedType,inputtedWard);
     newPatient.bookingDetails.push(newBooking)
-      
+
   /*  if(inputtedHospital == "GREEN VIEW HOSPITAL") {
       var availableBeds = totalNumberOfBedsGreenView - 1;
       totalNumberofBeds = availableBeds  ;
@@ -79,7 +79,7 @@ $(document).ready(function() {
     $(".bed-type").last().text(newBooking.bedType);
     $(".total-price").last().text("Kshs " +getValue());
 
-    $("#confirm-message").on("click",function() {
+    $("#confirmbooking").on("click",function() {
       $("#confirmation-message").last().text(("Dear " + inputtedPatientName +";" + " Medical Number: " + inputtedMedicalNumber + " , your booking details have been received at " + inputtedHospital + "." )).show();
     });
 
