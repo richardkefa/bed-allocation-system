@@ -10,12 +10,13 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  
 
 }
 
 
 .form-box {
-  width: 380px;
+  width: 370px;
   height: 480px;
   position: relative;
   margin: 6% auto;

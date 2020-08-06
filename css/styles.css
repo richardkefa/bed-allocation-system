@@ -49,6 +49,9 @@ footer>span {
 .checkout{
   background-color: #73c2fb ;
 }
+#checkout{
+  display: none;
+}
 .btn{
   text-align: center;
   background-color: #73c2fb;
@@ -57,6 +60,7 @@ footer>span {
   margin-bottom: 25px;
   font-weight: bold;
   font-size: large;
+  margin-right: 7vw;
 }
 
 #book{
@@ -68,5 +72,5 @@ margin-bottom: 10vh;
 margin-top: 5vh;
 }
 .text-center>p{
-  margin-right: 20vw;
+text-align: justify;
 }

@@ -2,13 +2,14 @@ var totalNumberOfBedsGreenView = 20;
 var totalNumberOfBedsGoodHope = 20;
 var totalNumberOfBedsHaloHeal = 20;
 localStorage.setItem("currentTotal", totalNumberOfBedsGreenView);
+
 function getValue() {
 var getBedPrice=document.getElementById("bed");
 var bedPrice=parseInt(getBedPrice.options[getBedPrice.selectedIndex].value);
 var getWardPrice=document.getElementById("ward");
 var wardPrice=parseInt(getWardPrice.options[getWardPrice.selectedIndex].value);
 var totalPrice= bedPrice + wardPrice;
-alert(totalPrice);
+// alert(totalPrice);
 return totalPrice=bedPrice + wardPrice;
 }
 function Patient (name,number,details) {
@@ -31,6 +32,8 @@ $(document).ready(function() {
     var totalNumberOfBedsGreenView = localStorage.getItem("currentTotal");
     var availableBeds = totalNumberOfBedsGreenView -1 ;
     totalNumberOfBedsGreenView = availableBeds  ;
+        localStorage.setItem("currentTotal", totalNumberOfBedsGreenView);
+
     document.getElementById("availableBeds").innerHTML="Available number of beds are "+ (totalNumberOfBedsGreenView);
   } else if (document.getElementById("goodhope").selected==true) {
     var availableBeds = totalNumberOfBedsGoodHope- 1;
@@ -47,7 +50,7 @@ $(document).ready(function() {
     var inputtedPatientName = $("input#patientname").val();
     var inputtedMedicalNumber = parseInt($("input#medicalno").val());
     var newPatient = new Patient(inputtedPatientName,inputtedMedicalNumber);
-    alert(inputtedPatientName);
+    // alert(inputtedPatientName);
 
     $(".new-booking").each(function() {
     var inputtedHospital = $(this).find("select#hospital").val();
@@ -55,7 +58,7 @@ $(document).ready(function() {
     var inputtedWard = $(this).find("select#ward").val();
     var newBooking = new Hospital  (inputtedHospital,inputtedBedType,inputtedWard);
     newPatient.bookingDetails.push(newBooking)
-    alert(newPatient.patientName);
+    // alert(newPatient.patientName);
 
   /*  if(inputtedHospital == "GREEN VIEW HOSPITAL") {
       var availableBeds = totalNumberOfBedsGreenView - 1;
@@ -72,10 +75,10 @@ $(document).ready(function() {
 
   }
 */
-    $(".patient-name").last().append(newPatient.patientName);
-    $(".hospital-name").last().append(newBooking.hospitalName);
-    $(".bed-type").last().append(newBooking.bedType);
-    $(".total-price").last().append(getValue());
+    $(".patient-name").last().text(newPatient.patientName);
+    $(".hospital-name").last().text(newBooking.hospitalName);
+    $(".bed-type").last().text(newBooking.bedType);
+    $(".total-price").last().text(getValue());
 
 
 
@@ -90,6 +93,14 @@ $(document).ready(function() {
 
 });
 });
-
-
+$("#confirmbooking").click(function(){
+  $("#checkout").slideUp("slow");
+  alert("reservation made succeffuly")
+})
+$("#book").click(function(){
+  $("#checkout").slideDown("slow");
+});
+$("#cancel").click(function(){
+  location.reload();
+})
 })
