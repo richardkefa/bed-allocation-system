@@ -7,6 +7,8 @@ var totalNumberOfBedsGreenView = 20;
 var totalNumberOfBedsGoodHope = 20;
 var totalNumberOfBedsHaloHeal = 20;
 localStorage.setItem("currentTotal", totalNumberOfBedsGreenView);
+
+
 function getValue() {
 var getBedPrice=document.getElementById("bed");
 var bedPrice=parseInt(getBedPrice.options[getBedPrice.selectedIndex].value);
@@ -19,13 +21,11 @@ function Patient (name,number,details) {
   this.patientName=name;
   this.medicalNumber=number;
   this.bookingDetails=[];
-
 }
 function Hospital (name,bed,ward,) {
   this.hospitalName = name;
   this.bedType=bed;
   this.wardType=ward;
-
 }
 
 
@@ -83,23 +83,13 @@ $(document).ready(function() {
 
     $("#confirm-message").on("click",function() {
       $("#confirmation-message").last().text(("Dear " + inputtedPatientName +";" + " Medical Number: " + inputtedMedicalNumber + " , your booking details have been received at " + inputtedHospital + "." )).show();
-
     });
-
 
     $("input#patientname").val("");
     $("input#medicalno").val("");
     $("select#hospital").val("");
     $("select#bed ").val("");
     $("select#ward").val("");
-
-
-
-
 });
-
-
 });
-
-
 })

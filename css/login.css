@@ -16,7 +16,7 @@ html {
 
 .form-box {
   width: 380px;
-  height: 480px;
+  height: 520px;
   position: relative;
   margin: 6% auto;
   background: #fff;
@@ -53,6 +53,7 @@ html {
   position: absolute;
   width: 280px;
   transition: .5s;
+  margin: 50px auto;
 }
 .input-field {
   width: 100%;
@@ -95,7 +96,14 @@ span {
   text-align: center;
   margin-top: 20px;
   color: red;
+  font-size: 15px;
+  padding: auto;
 }
 #confirm-message {
   display: none;
+}
+h2 {
+  font-size: auto;
+  text-align: center;
+  position: relative;
 }
