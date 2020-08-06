@@ -36,42 +36,42 @@
         <div class="form-group row">
           <label for="patientname" class="col-sm-2 col-form-label">Patient Name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="patientname" placeholder="Enter full name...">
+            <input type="text" class="form-control" id="patientname" placeholder="Enter full name..." required>
           </div>
         </div>
         <div class="form-group row">
           <label for="medicalno" class="col-sm-2 col-form-label">Medical No</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="medicalno" placeholder="Enter Medical Number...">
+            <input type="number" class="form-control" id="medicalno" placeholder="Enter Medical Number..." required>
           </div>
         </div>
         <h3>Next of Kin Details</h3>
         <div class="form-group row">
           <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="fullname" placeholder="Full Name...">
+            <input type="text" class="form-control" id="fullname" placeholder="Full Name..." required>
           </div>
         </div>
         <div class="form-group row">
           <label for="telno" class="col-sm-2 col-form-label">Tel No.</label>
           <div class="col-sm-10">
-            <input type="number" class="form-control" id="telno" placeholder="Enter phone Number...">
+            <input type="number" class="form-control" id="telno" placeholder="Enter phone Number..." required>
           </div>
         </div>
         <div class="form-group row">
           <label for="relationship" class="col-sm-2 col-form-label">Relationship</label>
           <div class="col-sm-10">
             <select class="form-control" name="relationship" id="relationship">
-              <option value="gurdian">Parent/Gurdian</option>
-              <option value="relative">Relative</option>
-              <option value="friend">Friend</option>
+              <option value="gurdian" >Parent/Gurdian</option>
+              <option value="relative" >Relative</option>
+              <option value="friend" >Friend</option>
             </select>
           </div>
         </div>
         <div class="form-group row">
           <label for="idnumber" class="col-sm-2 col-form-label">Id Number</label>
           <div class="col-sm-10">
-            <input type="number" class="form-control" id="idnumber" placeholder="Enter ID No...">
+            <input type="number" class="form-control" id="idnumber" placeholder="Enter ID No..." required>
           </div>
         </div>
       </form>
@@ -142,7 +142,7 @@
         <p>Hospital Name:<span class="hospital-name"></span></p>
         <p>Bed Type:<span class="bed-type"></span></p>
         <p>Total price:<span class="total-price"></span></p>
-        <button onclick="confirmationMessage()" class="btn">Confirm booking</button>
+        <button id="confirm-message" class="btn">Confirm booking</button>
         <div id="confirmation-message"></div>
       </div>
       <footer id="contact">

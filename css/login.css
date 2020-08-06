@@ -96,3 +96,6 @@ span {
   margin-top: 20px;
   color: red;
 }
+#confirm-message {
+  display: none;
+}
