@@ -26,6 +26,7 @@
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
           <li class="nav-item active">
             <a class="nav-link" href="#contact">Contact <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.html">LogOut <span class="sr-only">(current)</span></a>
           </li>
         </ul>
       </div>
@@ -141,10 +142,10 @@
         <p>Hospital Name:<span class="hospital-name"></span></p>
         <p>Bed Type:<span class="bed-type"></span></p>
         <p>Total price:<span class="total-price"></span></p>
-        <button  class="btn">Confirm booking</button>
-        <p id="confirmation-message"></p>
+        <button onclick="confirmationMessage()" class="btn">Confirm booking</button>
+        <div id="confirmation-message"></div>
       </div>
-      <footer>
+      <footer id="contact">
         <span>Email: bedallocation@info.com</span><br>
         <span>Tel Numbeer: +2541248543489</span>
       </footer>

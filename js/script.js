@@ -1,3 +1,8 @@
+
+function logOut() {
+  window.location.replace("index.html");
+}
+
 var totalNumberOfBedsGreenView = 20;
 var totalNumberOfBedsGoodHope = 20;
 var totalNumberOfBedsHaloHeal = 20;
@@ -57,6 +62,7 @@ $(document).ready(function() {
     newPatient.bookingDetails.push(newBooking)
     alert(newPatient.patientName);
 
+
   /*  if(inputtedHospital == "GREEN VIEW HOSPITAL") {
       var availableBeds = totalNumberOfBedsGreenView - 1;
       totalNumberofBeds = availableBeds  ;
@@ -72,10 +78,10 @@ $(document).ready(function() {
 
   }
 */
-    $(".patient-name").last().append(newPatient.patientName);
-    $(".hospital-name").last().append(newBooking.hospitalName);
-    $(".bed-type").last().append(newBooking.bedType);
-    $(".total-price").last().append(getValue());
+    $(".patient-name").last().text(newPatient.patientName);
+    $(".hospital-name").last().text(newBooking.hospitalName);
+    $(".bed-type").last().text(newBooking.bedType);
+    $(".total-price").last().text(getValue());
 
 
 
@@ -89,6 +95,11 @@ $(document).ready(function() {
 
 
 });
+function confirmationMessage () {
+alert("Dear " + " " +   $(".patient-name").last().text(newPatient.patientName) + ", your booking details have been received. ")
+
+}
+
 });
 
 

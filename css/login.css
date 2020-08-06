@@ -82,7 +82,7 @@ html {
 span {
   color: #777;
   font-size: 12px;
-  bottom: 68px;
+  bottom: 84px;
   position: absolute;
 }
 #login {
@@ -90,4 +90,9 @@ span {
 }
 #register {
   left: 450px;
+}
+#output,#output2 {
+  text-align: center;
+  margin-top: 20px;
+  color: red;
 }
