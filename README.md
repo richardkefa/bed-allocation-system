@@ -7,26 +7,25 @@ The bed allocation system allows users to login, fill in their details, select t
 
 Behaviours:
 
-Input.
-User login.
+User login:
 User name and password.
 Output: Directs to details page
 
-User details (booking).
+User details (booking):
 User fills in patient details and next of kin details.
 Output: Patient name output for checkout
 
 
-Hospital selection (booking).
+Hospital selection (booking):
 User selects preferred hospital and type of bed.
 Output: Hospital details and bed-type output for checkout
 
-Checkout.
+Checkout:
 Patient , hospital, bed-type and price details for review(Confirm/Cancel).
 Output: If confirmed, alert that reservation has been booked, else if cancelled, go back to refill patient and hospital details
 
-Logout
-Click logout
+Logout:
+Click logout.
 Output: Page redirects to login page
 
 
