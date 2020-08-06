@@ -8,7 +8,7 @@ The bed allocation system allows users to login, fill in their details, select t
 Behaviours:
 
 User login:
-User name and password.
+Input username and password.
 Output: Directs to details page
 
 User details (booking):
