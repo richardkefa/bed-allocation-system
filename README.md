@@ -1,35 +1,35 @@
-# Week5 Project
+# BED ALLOCATION SYSTEM
 
-Project Name: Bed Allocation System
+##Project Name: Bed Allocation System
 
-Project Description: 
+## Project Description: 
 The bed allocation system allows users to login, fill in their details, select their preferred hospital, bed-type and book a bed. The user then gets an output of checkout information of his/her name, hospital selected, bed-type and the price. The user can then go ahead and confirm booking or cancel the booking. If the user confirms the booking, there's an alert to confirm that the reservation has been booked, else if the user cancels booking, page goes up so that the user can rebook. When the user is done, he/she can logout, and the page goes back to the login home page
 
-Behaviours:
+## Behaviours:
 
-User login:
+## User login:
 Input username and password.
 Output: Directs to details page
 
-User details (booking):
+## User details (booking):
 User fills in patient details and next of kin details.
 Output: Patient name output for checkout
 
 
-Hospital selection (booking):
+## Hospital selection (booking):
 User selects preferred hospital and type of bed.
 Output: Hospital details and bed-type output for checkout
 
-Checkout:
+## Checkout:
 Patient , hospital, bed-type and price details for review(Confirm/Cancel).
 Output: If confirmed, alert that reservation has been booked, else if cancelled, go back to refill patient and hospital details
 
-Logout:
+## Logout:
 Click logout.
 Output: Page redirects to login page
 
 
-Authors: 
+## Authors: 
 1. Richard Kefa - Team Leader
 2. George Mwangi
 3. Moses Mbugua
@@ -37,7 +37,7 @@ Authors:
 5. David Wokabi
 
 
-Technolgies used: HTML, CSS , Javascript
+## Technolgies used: HTML, CSS , Javascript
 
 live link: 
 
