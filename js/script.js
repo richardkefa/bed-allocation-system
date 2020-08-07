@@ -1,4 +1,4 @@
-
+// Bussiness logic
 function logOut() {
   window.location.replace("index.html");
 }
@@ -28,7 +28,7 @@ function Hospital (name,bed,ward,) {
 }
 
 
-
+// User Logic
 $(document).ready(function() {
   if (document.getElementById("greenview").selected==true) {
     var totalNumberOfBedsGreenView = localStorage.getItem("currentTotal");
@@ -59,21 +59,6 @@ $(document).ready(function() {
     var newBooking = new Hospital  (inputtedHospital,inputtedBedType,inputtedWard);
     newPatient.bookingDetails.push(newBooking)
 
-  /*  if(inputtedHospital == "GREEN VIEW HOSPITAL") {
-      var availableBeds = totalNumberOfBedsGreenView - 1;
-      totalNumberofBeds = availableBeds  ;
-      document.getElementById("availableBeds").innerHTML="Available number of beds are "+ (availableBeds);
-  } else if (inputtedHospital == "GOOD HOPE HOSPITAL") {
-      var availableBeds = totalNumberOfBedsGoodHope - 1;
-      document.getElementById("availableBeds").innerHTML="Available number of beds are "+ (availableBeds);
-  } else if (inputtedHospital == "HALO HEAL HOSPITAL") {
-    var availableBeds = totalNumberOfBedsHaloHeal - 1;
-    document.getElementById("availableBeds").innerHTML="Available number of beds are "+ (availableBeds);
-  } else {
-    document.getElementById("availableBeds").innerHTML="Available number of beds are 0"+ ;
-
-  }
-*/
     $(".patient-name").last().text(newPatient.patientName);
     $(".hospital-name").last().text(newBooking.hospitalName);
     $(".bed-type").last().text(newBooking.bedType);
